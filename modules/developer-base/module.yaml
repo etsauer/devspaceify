@@ -29,7 +29,7 @@ packages:
 
 artifacts:
 - name: entrypoint.sh
-  path: /home/esauer/src/devspaceify/modules/developer-base/entrypoint.sh
+  path: entrypoint.sh
 
 execute:
 - script: gh-cli.sh
