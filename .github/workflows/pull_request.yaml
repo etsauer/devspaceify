@@ -8,3 +8,4 @@ jobs:
     uses: ./.github/workflows/cekit-build.yaml
     with:
       tag: quay.io/etsauer/developer-base:${{ github.sha }}
+    secrets: inherit
