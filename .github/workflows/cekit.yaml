@@ -29,11 +29,11 @@ jobs:
       - name: Install CEkit
         run: |
           # Install dependent package
-          sudo apt install libkrb5-dev
+          sudo apt install libkrb5-dev podman
 
           # Install CEKit
           # Execute the same command to upgrade to latest version
-          pip install -U cekit python-docker
+          pip install -U cekit
           
           # Now you are able to run CEKit
           cekit --help
@@ -41,4 +41,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build base iamge
         run: |
-          cekit build docker
+          cekit build podman
