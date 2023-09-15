@@ -33,7 +33,7 @@ jobs:
 
           # Install CEKit
           # Execute the same command to upgrade to latest version
-          pip install -U cekit
+          pip install -U cekit python-docker
           
           # Now you are able to run CEKit
           cekit --help
