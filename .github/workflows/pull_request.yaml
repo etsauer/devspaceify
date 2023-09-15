@@ -14,4 +14,4 @@ jobs:
   push-images:
     uses: ./.github/workflows/podman-push.yaml
     with:
-      tag: quay.io/etsauer/developer-base:${TAG}
+      tag: quay.io/etsauer/developer-base:${{ env.TAG }}
