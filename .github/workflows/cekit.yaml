@@ -28,6 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install CEkit
         run: |
+          # Install VirtualEnv
+          pipx install virtualenv
+          virtualenv --help
+
           # Prepare virtual environment
           virtualenv ~/cekit
           source ~/cekit/bin/activate
