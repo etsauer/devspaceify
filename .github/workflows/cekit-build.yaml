@@ -31,4 +31,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build base iamge
         run: |
-          cekit build podman --tag=${inputs.tag}
+          cekit build podman --tag=${{ inputs.tag }}
