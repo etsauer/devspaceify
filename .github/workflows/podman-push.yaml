@@ -28,8 +28,3 @@ jobs:
       - name: Install CEKit
         uses: cekit/actions-setup-cekit@v1.1.5
 
-      # Runs a set of commands using the runners shell
-      - name: Push Image
-        run: |
-          podman login -u="${secrets.QUAY_ROBOT_USER}" -p="${secrets.QUAY_ROBOT_TOKEN}" ${env.REGISTRY_URL}
-          podman push ${inputs.tag}
