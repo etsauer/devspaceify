@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CD
 
 # Controls when the workflow will run
 on:
@@ -29,6 +29,7 @@ jobs:
         uses: cekit/actions-setup-cekit@v1.1.5
 
       # Runs a set of commands using the runners shell
-      - name: Build base iamge
+      - name: Push Image
         run: |
-          cekit build podman --tag=${inputs.tag}
+          podman login -u="${secrets.QUAY_ROBOT_USER}" -p="${secrets.QUAY_ROBOT_TOKEN}" ${env.REGISTRY_URL}
+          podman push ${inputs.tag}

@@ -3,6 +3,15 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  TAG: ${github.sha}
+
 jobs:
   build-images:
     uses: ./.github/workflows/cekit-build.yaml
+    with:
+      tag: quay.io/etsauer/developer-base:${TAG}
+  push-images:
+    uses: ./.github/workflows/podman-push.yaml
+    with:
+      tag: quay.io/etsauer/developer-base:${TAG}
