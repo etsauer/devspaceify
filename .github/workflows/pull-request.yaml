@@ -5,7 +5,12 @@ on:
 
 jobs:
   build-images:
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ['developer-base', 'developer-openjdk-17', 'developer-openjdk-17']
     uses: ./.github/workflows/cekit-build.yaml
     with:
-      tag: quay.io/etsauer/developer-base:${{ github.sha }}
+      tag: quay.io/etsauer/${{ matrix.image }}:${{ github.sha }}
+      image: ${{ matrix.image }}
     secrets: inherit

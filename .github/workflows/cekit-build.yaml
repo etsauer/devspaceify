@@ -7,6 +7,9 @@ on:
   # This workflow gets called by other workflows
   workflow_call:
     inputs:
+      image:
+        required: true
+        type: string
       tag:
         required: true
         type: string
@@ -30,7 +33,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build base iamge
         run: |
-          cekit build podman --tag=${{ inputs.tag }}
+          cekit build --overrides ${{ inputs.image }}.yaml podman --tag=${{ inputs.tag }}
 
       # Runs a set of commands using the runners shell
       - name: Push Image
