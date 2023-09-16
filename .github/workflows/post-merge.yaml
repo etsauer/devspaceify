@@ -1,0 +1,16 @@
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-images:
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ['developer-base', 'developer-openjdk-17', 'developer-openjdk-17']
+    uses: ./.github/workflows/cekit-build.yaml
+    with:
+      tag: quay.io/etsauer/${{ matrix.image }}:latest
+      image: ${{ matrix.image }}
+    secrets: inherit
