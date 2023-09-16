@@ -1,0 +1,11 @@
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-images:
+    uses: ./.github/workflows/cekit-build.yaml
+    with:
+      tag: quay.io/etsauer/developer-base:latest
+    secrets: inherit
