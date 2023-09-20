@@ -8,6 +8,6 @@ components:
         value: /bin/zsh
       - name: VSCODE_DEFAULT_WORKSPACE
         value: /projects/devspaceify/devspaceify.code-workspace
-      image: quay.io/etsauer/developer-base:d40083ddd841e1bae9f6b23ee16049970f35e876
+      image: quay.io/etsauer/developer-base:latest
       mountSources: true
     name: vscode
