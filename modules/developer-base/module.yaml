@@ -7,11 +7,13 @@ version: '17'
 packages:
   manager: dnf
   install:
+  - compat-openssl11
   - diffutils
   - git
   - iproute
   - jq
   - less
+  - libbrotli
   - lsof
   - man-db
   - nano
