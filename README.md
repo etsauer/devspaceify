@@ -1,4 +1,4 @@
-# DevSpace(s)-ify your exiting container images
+# DevSpace(s)-ify your existing container images
 
 This is a proposed approach for how to take any existing UBI-based language image, and turn it into a Dev Spaces optimized container image. Dev Spaces/Eclipse Che have introduced us to this concept that a container platform can be used, not just to host production applications, but also as a place optimized for developers to write, test and commit code. By running a development workspace with an IDE inside of a container and serving it through the browser, we can extend all of the consistency, immutability, and portability benefits of our application runtime environments to inner-loop development.
 
