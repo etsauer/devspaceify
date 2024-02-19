@@ -10,3 +10,5 @@ packages:
 
 execute:
 - script: ohmyz.sh
+- script: kustomize.sh
+  user: root
