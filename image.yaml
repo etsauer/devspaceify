@@ -13,3 +13,4 @@ modules:
   install:
   - name: developer-base
   - name: custom-tooling
+  - name: openshift-tools
